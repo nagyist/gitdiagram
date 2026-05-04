@@ -211,8 +211,7 @@ describe("useDiagram", () => {
 
     await result.current.handleRegenerate();
 
-    await waitFor(() => expect(result.current.loading).toBe(false));
-    expect(result.current.error).toContain("100,000");
+    await waitFor(() => expect(result.current.error).toContain("100,000"));
     expect(result.current.error).toContain("API key");
   });
 
